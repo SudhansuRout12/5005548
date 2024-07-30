@@ -1,0 +1,63 @@
+Q)Explain how arrays are represented in memory and their advantages?
+A)In Java, arrays are a fundamental data structure used to store multiple values of the same type 
+1.Memory Representation:-
+  -Contiguous Memory Allocation: Arrays are stored in contiguous memory locations. This means that each element of the array is located right next to the previous one. For example, if an        int[] array is allocated, the memory layout will be continuous, with each integer occupying a fixed amount of space.
+  -Index-Based Access: Each element in an array is accessible using its index. For instance, array[0] refers to the first element, array[1] refers to the second element, and so on. The index is used to compute the exact memory location of an element.
+  -Fixed Size: Once an array is created, its size is fixed and cannot be changed. The size is specified at the time of creation.
+
+2.Advantages:-
+  -Efficient Access and Manipulation: Since arrays allow direct access to any element using its index, operations such as searching for an employee by ID (in 'searchEmployeeById' method) are straightforward. Each access operation is O(1) in time complexity due to the direct index-based access.
+  -Simple Implementation: Using an array simplifies the implementation of the 'EmployeeManagementSystem' class. Adding, deleting, and traversing employees are handled with simple array operations. The straightforward index-based logic helps keep the code clean and understandable.
+  -Memory Efficiency: Arrays use a contiguous block of memory which helps in cache locality. This can improve performance, especially in scenarios with a large number of elements, as accessing consecutive elements is faster due to spatial locality.
+  -Ease of Traversal: Traversing the array (in the 'traverseEmployees' method) is straightforward. The code loops through the array indices and prints each employee. Since the array is fixed in size, you can iterate over it without additional complexity.
+
+
+
+
+
+Q)Analyze the time complexity of each operation (add, search, traverse, delete).
+A)1. Add Employee ('addEmployee' Method)
+    -Operation: Adds a new Employee object to the array.
+    -Time Complexity: O(1)
+The method adds an employee at the end of the array and increments the size counter. This is a constant-time operation since it involves a fixed number of steps regardless of the number of employees.
+  2. Search Employee by ID ('SearchEmployeeById' Method).
+     -Operation: Searches for an employee by their 'employeeId'.
+     -Time Complexity: O(n)
+The method iterates through the array of employees to find the one with the matching ID. In the worst case, it may need to check all n elements (where n is the number of employees currently in the array).
+  3. Traverse Employees ('traverseEmployees' Method).
+     -Operation: Prints details of all employees in the array.
+     -Time Complexity: O(n)
+The method iterates through the array once, printing each employee’s details. This operation is linear in the number of employees.
+ 4. Delete Employee by ID ('deleteEmployeeById' Method)
+     -Operation: Deletes an employee by their 'employeeId' and shifts elements to fill the gap.
+     -Time Complexity: O(n)
+Finding the employee to delete involves a linear search, which is O(n). After finding the employee, shifting the elements to fill the gap also takes linear time, as all subsequent elements need to be moved one position to the left.
+
+The overall efficiency of these operations is influenced by the need to handle a linear number of elements in search, traverse, and delete operations. The add operation is efficient due to the fixed size and direct access provided by arrays.
+
+
+
+
+
+Q)Discuss the limitations of arrays and when to use them.
+A)The limitations of Arrays are:
+1)Fixed Size:
+Limitation: The size of an array is fixed upon creation. Once it is full, you cannot add more elements without creating a new, larger array and copying over existing elements.
+2)Linear Search:
+Limitation: Searching for elements, especially in unsorted arrays, requires a linear scan (O(n) time complexity).
+3)Element Shifting:
+Limitation: Deleting elements involves shifting all subsequent elements to fill the gap, which is O(n) in time complexity.
+4)Lack of Built-in Methods:
+Limitation: Arrays do not have built-in methods for common operations like resizing, searching, or deleting elements.
+5)Homogeneous Elements:
+Limitation: Arrays are designed to hold elements of the same type.
+
+When to Use Arrays:
+1)Fixed-size Collections:
+Use arrays when the size of the collection is known in advance and will not change. They are simple and provide fast access to elements.
+2)Performance-Critical Applications:
+Arrays offer constant-time access to elements (O(1)), making them suitable for performance-critical applications where speed is essential and the size is stable.
+3)Memory Efficiency:
+If memory usage is a concern, arrays can be more memory-efficient than other data structures that involve additional overhead (e.g., linked lists or dynamic arrays).
+4)Simplicity:
+Arrays are straightforward and provide a simple way to manage collections of elements when complex operations are not required.
