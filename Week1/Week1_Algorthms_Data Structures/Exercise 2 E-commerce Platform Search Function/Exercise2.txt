@@ -8,7 +8,7 @@ O(1): Constant time complexity – the algorithm's performance remains constant 
 O(n): Linear time complexity – performance scales linearly with input size.
 O(\log n): Logarithmic time complexity – performance scales logarithmically with input size.
 
-Q)Describe the best, average, and worst-case scenarios for search operations in short.  for the above program.
+Q)Describe the best, average, and worst-case scenarios for search operations in .
 A)Linear Search:
 Best-case: O(1) when the target is the first element
 Average and worst-case are :O(n), where n is the number of products.
