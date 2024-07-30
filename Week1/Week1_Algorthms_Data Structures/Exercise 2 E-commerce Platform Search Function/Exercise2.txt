@@ -1,4 +1,4 @@
-Q)Explain Big O notation and how it helps in analyzing algorithms in short.
+Q)Explain Big O notation and how it helps in analyzing algorithms in .
 A)Big O Notation
 Big O Notation is used to describe the performance or complexity of an algorithm in terms of time and space as the size of the input grows. It helps in analyzing and comparing algorithms based on their efficiency:-
 Focus: It highlights how the runtime or memory usage increases with larger input sizes, providing an upper bound on performance.
